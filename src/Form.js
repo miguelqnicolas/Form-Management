@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 
 const Form = props => {
     const [member, setMember] = useState({
-        id: '',
         name: '',
         role: '',
         email: ''
@@ -14,7 +13,7 @@ const Form = props => {
         // {
         //     name: event.target.value.name,
         //     role: event.target.value.role,
-        //     email: event.target.value.email  
+        //     email: event.target.value.email
         // }
     };
 
@@ -22,6 +21,7 @@ const Form = props => {
     const submit = event => {
         event.preventDefault();
         props.addNewMember(member);
+        console.log(member);
         setMember({
             name: '',
             role: '',
